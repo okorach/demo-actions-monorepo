@@ -49,6 +49,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
           SONAR_PROJECT_BASE_DIR: comp-cli
+          SONAR_VERBOSE: true
         with:
           sonar.projectBaseDir: comp-cli
           sonar.verbose: true
