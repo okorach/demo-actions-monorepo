@@ -7,7 +7,6 @@ on:
     types: [opened, synchronize, reopened]
 jobs:
   checkout:
-    name: Checkout
     runs-on: ubuntu-latest
     #strategy:
     #  matrix:
