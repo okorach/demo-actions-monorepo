@@ -59,6 +59,7 @@ jobs:
           sonar.qualitygate.wait: false
   #----------------- Maven scan --------------------
   scan-maven:
+    runs-on: ubuntu-latest
     needs: checkout
     steps:
       - name: Set up JDK 11
