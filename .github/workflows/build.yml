@@ -68,7 +68,8 @@ jobs:
           fi
   #----------------- CLI scan ---------------------
   scan-cli:
-    if: needs.check.outputs.run_cli == 'true'
+    needs: check-modified-files
+    if: needs.check-modified-files.outputs.run_cli == 'true'
     runs-on: ubuntu-latest
     #strategy:
     #  matrix:
@@ -142,7 +143,8 @@ jobs:
 
   #----------------- Maven scan --------------------
   scan-maven:
-    if: needs.check.outputs.run_maven == 'true'
+    needs: check-modified-files
+    if: needs.check-modified-files.outputs.run_maven == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -178,7 +180,8 @@ jobs:
 
   #----------------- Gradle scan --------------------
   scan-gradle:
-    if: needs.check.outputs.run_gradle == 'true'
+    needs: check-modified-files
+    if: needs.check-modified-files.outputs.run_gradle == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -211,7 +214,8 @@ jobs:
 
   #----------------- .Net scan --------------------
   scan-dotnet:
-    if: needs.check.outputs.run_dotnet == 'true'
+    needs: check-modified-files
+    if: needs.check-modified-files.outputs.run_dotnet == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
