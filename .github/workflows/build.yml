@@ -17,6 +17,7 @@ jobs:
         with:
           fetch-depth: 0
   scan-cli:
+    runs-on: ubuntu-latest
     needs: checkout
     steps:
       - name: Set up Python ${{ matrix.python-version }}
@@ -88,6 +89,7 @@ jobs:
             -Dsonar.projectName="GitHub project - Maven"
       #----------------- Gradle scan --------------------
   scan-gradle:
+    runs-on: ubuntu-latest
     needs: checkout
     steps:
       #- name: Set up JDK 11
