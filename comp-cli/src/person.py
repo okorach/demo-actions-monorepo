@@ -30,7 +30,6 @@ class Person:
         return "%s %s" % (self.firstname, self.lastname)
 
     def happy_birthday(self):
-        self.age += 1
         return "Happy birthday " + self.firstname
 
     def is_major(self):
