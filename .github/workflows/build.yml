@@ -42,26 +42,26 @@ jobs:
               build_maven=1
             elif [[ $dir == comp-gradle ]]; then
               build_gradle=1
-            elif[[ $dir == comp-dotnet ]]; then
+            elif [[ $dir == comp-dotnet ]]; then
               build_dotnet=1
             fi
           done < files.txt
-          if [[ build_cli == 1 ]]; then
+          if [[ $build_cli == 1 ]]; then
             echo "::set-output name=run_cli::true"
           else
             echo "::set-output name=run_cli::false"
           fi
-          if [[ build_maven == 1 ]]; then
+          if [[ $build_maven == 1 ]]; then
             echo "::set-output name=run_maven::true"
           else
             echo "::set-output name=run_maven::false"
           fi
-          if [[ build_gradle == 1 ]]; then
+          if [[ $build_gradle == 1 ]]; then
             echo "::set-output name=run_gradle::true"
           else
             echo "::set-output name=run_gradle::false"
           fi
-          if [[ build_dotnet == 1 ]]; then
+          if [[ $build_dotnet == 1 ]]; then
             echo "::set-output name=run_dotnet::true"
           else
             echo "::set-output name=run_dotnet::false"
