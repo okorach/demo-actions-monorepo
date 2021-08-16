@@ -6,8 +6,6 @@ public class App {
     }
 
     public static void main(String[] args) {
-        int i = 0;
-        i++;
         System.out.println(new App().getGreeting());
     }
 }
