@@ -1,4 +1,4 @@
-name: Build
+name: Build and Scan
 on:
   push:
     branches:
@@ -10,7 +10,6 @@ jobs:
   #----------------- CLI scan ---------------------
   scan-cli:
     runs-on: ubuntu-latest
-    needs: checkout
     #strategy:
     #  matrix:
     #    python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
@@ -65,7 +64,6 @@ jobs:
   #----------------- Maven scan --------------------
   scan-maven:
     runs-on: ubuntu-latest
-    needs: checkout
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -101,7 +99,6 @@ jobs:
   #----------------- Gradle scan --------------------
   scan-gradle:
     runs-on: ubuntu-latest
-    needs: checkout
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -134,15 +131,18 @@ jobs:
   #----------------- .Net scan --------------------
   scan-dotnet:
     runs-on: ubuntu-latest
-    needs: checkout
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Cache Scanner for .Net
         id: cache-sonar-scanner
         uses: actions/cache@v1
         with:
           path: ~/.sonar/scanner
-          key: ${{ runner.os }}-sonar-scanner
-          restore-keys: ${{ runner.os }}-sonar-scanner
+          key: ${{ runner.os }}-dotnet-scan
+          restore-keys: ${{ runner.os }}-dotnet-scan
       - name: Install Scanner for .Net
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         shell: pwsh
