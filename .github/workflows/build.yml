@@ -7,8 +7,68 @@ on:
     types: [opened, synchronize, reopened]
 jobs:
 
+  check-modified-files:
+    name: Check modified files
+    outputs:
+      run_cli: ${{ steps.check_files.outputs.run_cli }}
+      run_maven: ${{ steps.check_files.outputs.run_maven }}
+      run_gradle: ${{ steps.check_files.outputs.run_gradle }}
+      run_dotnet: ${{ steps.check_files.outputs.run_dotnet }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - name: check modified files
+        id: check_files
+        run: |
+          echo "=============== list modified files ==============="
+          git diff --name-only HEAD^ HEAD
+          
+          echo "========== check paths of modified files =========="
+          build_cli=0
+          build_maven=0
+          build_gradle=0
+          build_dotnet=0
+          git diff --name-only HEAD^ HEAD > files.txt
+          while IFS= read -r file
+          do
+            echo $file
+            dir=$(echo $file|cut -d '/' -f 1)
+            if [[ $dir == comp-cli ]]; then
+              build_cli=1
+            elif [[ $dir == comp-maven ]]; then
+              build_maven=1
+            elif [[ $dir == comp-gradle ]]; then
+              build_gradle=1
+            elif[[ $dir == comp-dotnet ]]; then
+              build_dotnet=1
+            fi
+          done < files.txt
+          if [[ build_cli == 1 ]]; then
+            echo "::set-output name=run_cli::true"
+          else
+            echo "::set-output name=run_cli::false"
+          fi
+          if [[ build_maven == 1 ]]; then
+            echo "::set-output name=run_maven::true"
+          else
+            echo "::set-output name=run_maven::false"
+          fi
+          if [[ build_gradle == 1 ]]; then
+            echo "::set-output name=run_gradle::true"
+          else
+            echo "::set-output name=run_gradle::false"
+          fi
+          if [[ build_dotnet == 1 ]]; then
+            echo "::set-output name=run_dotnet::true"
+          else
+            echo "::set-output name=run_dotnet::false"
+          fi
   #----------------- CLI scan ---------------------
   scan-cli:
+    if: needs.check.outputs.run_cli == 'true'
     runs-on: ubuntu-latest
     #strategy:
     #  matrix:
@@ -18,6 +78,25 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: check modified files
+        id: check_files
+        run: |
+          echo "=============== list modified files ==============="
+          git diff --name-only HEAD^ HEAD
+          
+          echo "========== check paths of modified files =========="
+          git diff --name-only HEAD^ HEAD > files.txt
+          while IFS= read -r file
+          do
+            echo $file
+            if [[ $file != comp-cli/* ]]; then
+              echo "This modified file is not under the 'comp-cli' folder."
+              echo "::set-output name=run_job::false"
+              break
+            else
+              echo "::set-output name=run_job::true"
+            fi
+          done < files.txt
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
@@ -63,6 +142,7 @@ jobs:
 
   #----------------- Maven scan --------------------
   scan-maven:
+    if: needs.check.outputs.run_maven == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -98,6 +178,7 @@ jobs:
 
   #----------------- Gradle scan --------------------
   scan-gradle:
+    if: needs.check.outputs.run_gradle == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -130,6 +211,7 @@ jobs:
 
   #----------------- .Net scan --------------------
   scan-dotnet:
+    if: needs.check.outputs.run_dotnet == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
