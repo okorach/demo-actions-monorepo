@@ -41,6 +41,6 @@ class Person:
 
 def hotspot(ip):
     if ip is None:
-        ip = '192.168.12.44'
+        ip = '192.168.12.43'
     sock = socket.socket()
     sock.bind((ip, 9090))
