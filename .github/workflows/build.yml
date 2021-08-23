@@ -28,9 +28,9 @@ jobs:
           
           echo "========== check paths of modified files =========="
           build_cli="false"
-          build_maven=0
-          build_gradle=0
-          build_dotnet=0
+          build_maven="false"
+          build_gradle="false"
+          build_dotnet="false"
           git diff --name-only HEAD^ HEAD > files.txt
           while IFS= read -r file
           do
@@ -39,29 +39,17 @@ jobs:
             if [[ $dir == comp-cli ]]; then
               build_cli="true"
             elif [[ $dir == comp-maven ]]; then
-              build_maven=1
+              build_maven="true"
             elif [[ $dir == comp-gradle ]]; then
-              build_gradle=1
+              build_gradle="true"
             elif [[ $dir == comp-dotnet ]]; then
-              build_dotnet=1
+              build_dotnet="true"
             fi
           done < files.txt
           echo "::set-output name=run_cli::$build_cli"
-          if [[ $build_maven == 1 ]]; then
-            echo "::set-output name=run_maven::true"
-          else
-            echo "::set-output name=run_maven::false"
-          fi
-          if [[ $build_gradle == 1 ]]; then
-            echo "::set-output name=run_gradle::true"
-          else
-            echo "::set-output name=run_gradle::false"
-          fi
-          if [[ $build_dotnet == 1 ]]; then
-            echo "::set-output name=run_dotnet::true"
-          else
-            echo "::set-output name=run_dotnet::false"
-          fi
+          echo "::set-output name=run_maven::$build_maven"
+          echo "::set-output name=run_gradle::$build_gradle"
+          echo "::set-output name=run_dotnet::$build_dotnet"
   #----------------- CLI scan ---------------------
   scan-cli:
     needs: check-modified-files
