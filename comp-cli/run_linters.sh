@@ -2,7 +2,7 @@
 
 # This script runs pylint, bandit and flake8 to generate 3rd party linters issues
 
-buildDir="../build"
+buildDir="build"
 
 pylintReport="$buildDir/pylint-report.out"
 banditReport="$buildDir/bandit-report.json"
@@ -12,7 +12,7 @@ flake8Report="$buildDir/flake8-report.out"
 
 echo "Running pylint"
 rm -f $pylintReport
-pylint toolbox fruits --disable=C0114,C0116 -r n --msg-template="{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}" > $pylintReport
+pylint src test --disable=C0114,C0116 -r n --msg-template="{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}" > $pylintReport
 
 echo "Running flake8"
 rm -f $flake8Report
