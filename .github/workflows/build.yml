@@ -35,7 +35,7 @@ jobs:
           while IFS= read -r file
           do
             echo $file
-            if [[ $file == .github/workflows/build.yaml ]]; then
+            if [[ "$file" == ".github/workflows/build.yml" ]]; then
               build_cli="true"
               build_maven="true"
               build_gradle="true"
