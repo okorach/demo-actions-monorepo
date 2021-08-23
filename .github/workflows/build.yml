@@ -35,6 +35,13 @@ jobs:
           while IFS= read -r file
           do
             echo $file
+            if [[ $file == ".github/workflows/build.yaml" ]]; then
+              build_cli="true"
+              build_maven="true"
+              build_gradle="true"
+              build_dotnet="true"
+              break
+            fi
             dir=$(echo $file|cut -d '/' -f 1)
             if [[ $dir == comp-cli ]]; then
               build_cli="true"
