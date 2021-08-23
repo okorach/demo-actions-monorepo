@@ -27,7 +27,7 @@ jobs:
           git diff --name-only HEAD^ HEAD
           
           echo "========== check paths of modified files =========="
-          build_cli=0
+          build_cli="false"
           build_maven=0
           build_gradle=0
           build_dotnet=0
@@ -37,7 +37,7 @@ jobs:
             echo $file
             dir=$(echo $file|cut -d '/' -f 1)
             if [[ $dir == comp-cli ]]; then
-              build_cli=1
+              build_cli="true"
             elif [[ $dir == comp-maven ]]; then
               build_maven=1
             elif [[ $dir == comp-gradle ]]; then
@@ -46,11 +46,7 @@ jobs:
               build_dotnet=1
             fi
           done < files.txt
-          if [[ $build_cli == 1 ]]; then
-            echo "::set-output name=run_cli::true"
-          else
-            echo "::set-output name=run_cli::false"
-          fi
+          echo "::set-output name=run_cli::$build_cli"
           if [[ $build_maven == 1 ]]; then
             echo "::set-output name=run_maven::true"
           else
