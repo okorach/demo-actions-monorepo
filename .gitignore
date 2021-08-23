@@ -10,3 +10,7 @@ comp-maven/.classpath
 comp-maven/.project
 comp-gradle/.gradle/
 **/*.log
+comp-gradle/.classpath
+comp-gradle/.project
+comp-gradle/bin/
+comp-gradle/.settings/
