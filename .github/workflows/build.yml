@@ -23,6 +23,7 @@ jobs:
       - name: check modified files
         id: check_files
         run: |
+          echo "=== Checking branch name"
           branch_name=`echo ${GITHUB_REF#refs/heads/}`
           shopt -s extglob
           if [[ $branch_name == "(force/).*" ]]; then
