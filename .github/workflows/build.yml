@@ -24,7 +24,7 @@ jobs:
         id: check_files
         run: |
           branch_name=$(echo ${GITHUB_REF#refs/heads/})
-          shopt +s extglob
+          shopt -s extglob
           if [[ $branch_name == (force/).* ]]; then
             echo "=== Branch name \"$branch_name\" hints at full rebuild"
             build_cli="true"
