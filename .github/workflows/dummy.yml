@@ -6,23 +6,23 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
-  [GitHub project - Gradle] SonarQube Code Analysis:
+  \[GitHub project - Gradle\] SonarQube Code Analysis:
     runs-on: ubuntu-latest
-      steps:
-        - name: Exit with success
-          run: exit 0
-  [GitHub project - Maven] SonarQube Code Analysis:
+    steps:
+      - name: Exit with success
+        run: exit 0
+  \[GitHub project - Maven\] SonarQube Code Analysis:
     runs-on: ubuntu-latest
-      steps:
-        - name: Exit with success
-          run: exit 0
-  [GitHub project - dotnet] SonarQube Code Analysis:
+    steps:
+      - name: Exit with success
+        run: exit 0
+  \[GitHub project - dotnet\] SonarQube Code Analysis:
     runs-on: ubuntu-latest
-      steps:
-        - name: Exit with success
-          run: exit 0
-  [GitHub project] SonarQube Code Analysis:
+    steps:
+      - name: Exit with success
+        run: exit 0
+  \[GitHub project\] SonarQube Code Analysis:
     runs-on: ubuntu-latest
-      steps:
-        - name: Exit with success
-          run: exit 0
+    steps:
+      - name: Exit with success
+        run: exit 0
