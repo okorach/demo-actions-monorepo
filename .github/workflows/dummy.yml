@@ -1,4 +1,4 @@
-name: Dummy checks
+name: Build and Scan
 on:
   push:
     branches:
