@@ -36,7 +36,7 @@ jobs:
             while IFS= read -r file
             do
               echo $file
-              if [[ "$file" == "\.github/workflows/build.yml" ]]; then
+              if [[ "$file" == ".github/workflows/build.yml" ]]; then
                 echo "=== Main workflow file changed --> full rebuild"
                 read -r build_cli build_maven build_gradle build_dotnet <<< "true true true true"
                 break
