@@ -6,22 +6,26 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
-  \[GitHub project - Gradle\] SonarQube Code Analysis:
+  sq-gradle:
+    runs-on: ubuntu-latest
+    name: "[GitHub project - Gradle] SonarQube Code Analysis"
+    steps:
+      - name: Exit with success
+        run: exit 0
+  sq-maven:
+    name: "[GitHub project - Maven] SonarQube Code Analysis"
     runs-on: ubuntu-latest
     steps:
       - name: Exit with success
         run: exit 0
-  \[GitHub project - Maven\] SonarQube Code Analysis:
+  sq-dotnet:
+    name: "[GitHub project - dotnet] SonarQube Code Analysis"
     runs-on: ubuntu-latest
     steps:
       - name: Exit with success
         run: exit 0
-  \[GitHub project - dotnet\] SonarQube Code Analysis:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Exit with success
-        run: exit 0
-  \[GitHub project\] SonarQube Code Analysis:
+  sq-cli:
+    name: "[GitHub project] SonarQube Code Analysis"
     runs-on: ubuntu-latest
     steps:
       - name: Exit with success
