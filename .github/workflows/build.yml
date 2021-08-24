@@ -28,26 +28,17 @@ jobs:
           shopt -s extglob
           if [[ $branch_name == "(force/).*" ]]; then
             echo "=== Branch name \"$branch_name\" hints at full rebuild"
-            build_cli="true"
-            build_maven="true"
-            build_gradle="true"
-            build_dotnet="true"
+            read -r build_cli build_maven build_gradle build_dotnet <<< "true true true true"
           else
             echo "=== Smart rebuild"
-            build_cli="false"
-            build_maven="false"
-            build_gradle="false"
-            build_dotnet="false"
+            read -r build_cli build_maven build_gradle build_dotnet <<< "false false false false"
             git diff --name-only HEAD^ HEAD > files.txt
             while IFS= read -r file
             do
               echo $file
-              if [[ "$file" == ".github/workflows/build.yml" ]]; then
+              if [[ "$file" == "\.github/workflows/build.yml" ]]; then
                 echo "=== Main workflow file changed --> full rebuild"
-                build_cli="true"
-                build_maven="true"
-                build_gradle="true"
-                build_dotnet="true"
+                read -r build_cli build_maven build_gradle build_dotnet <<< "true true true true"
                 break
               fi
               dir=$(echo $file|cut -d '/' -f 1)
