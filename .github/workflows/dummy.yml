@@ -19,7 +19,7 @@ jobs:
       - name: Exit with success
         run: exit 0
   sq-dotnet:
-    name: "[GitHub project - dotnet] SonarQube Code Analysis"
+    name: "[GitHub project - .Net Core] SonarQube Code Analysis"
     runs-on: ubuntu-latest
     steps:
       - name: Exit with success
