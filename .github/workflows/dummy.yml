@@ -1,0 +1,32 @@
+name: Build and Scan
+on:
+  push:
+    branches:
+      - master # or the name of your main branch
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  sq-gradle:
+    runs-on: ubuntu-latest
+    name: "[GitHub project - Gradle] SonarQube Code Analysis"
+    steps:
+      - name: Exit with success
+        run: exit 0
+  sq-maven:
+    name: "[GitHub project - Maven] SonarQube Code Analysis"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit with success
+        run: exit 0
+  sq-dotnet:
+    name: "[GitHub project - .Net Core] SonarQube Code Analysis"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit with success
+        run: exit 0
+  sq-cli:
+    name: "[GitHub project] SonarQube Code Analysis"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit with success
+        run: exit 0
