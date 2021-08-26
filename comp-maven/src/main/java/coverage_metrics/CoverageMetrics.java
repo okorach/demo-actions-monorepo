@@ -14,8 +14,6 @@ public class CoverageMetrics {
       k = 1;
    }
    int l = 0;
-   l++;
-   l++;
    return (float)i/(k+1);
   }
 }
