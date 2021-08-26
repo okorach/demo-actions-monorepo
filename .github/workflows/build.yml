@@ -26,8 +26,8 @@ jobs:
           echo "=== Checking branch name"
           branch_name=`echo ${GITHUB_REF#refs/heads/}`
           shopt -s extglob
-          if [[ $branch_name == "(force/).*" ]]; then
-            echo "=== Branch name \"$branch_name\" hints at full rebuild"
+          if [[ $branch_name == "(f/).*" ]]; then
+            echo "=== Branch name '$branch_name' hints at full rebuild"
             read -r build_cli build_maven build_gradle build_dotnet <<< "true true true true"
           else
             echo "=== Smart rebuild"
