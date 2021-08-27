@@ -33,7 +33,7 @@ class Person:
         return "Happy birthday " + self.firstname
 
     def is_major(self):
-        return self.age > 20
+        return self.age > 18
 
     def lock(self):
         self.password = "donttouch"
