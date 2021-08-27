@@ -34,7 +34,6 @@ class Person:
 
     def is_major(self):
         return self.age > 18
-        self.age += 1
 
     def lock(self):
         self.password = "donttouch"
