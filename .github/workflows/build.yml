@@ -58,6 +58,14 @@ jobs:
           echo "::set-output name=run_gradle::$build_gradle"
           echo "::set-output name=run_dotnet::$build_dotnet"
   #----------------- CLI scan ---------------------
+  skipped-cli-qg:
+    needs: check-what-to-build
+    if: needs.check-what-to-build.outputs.run_cli == 'false'
+    name: "[GitHub project] SonarQube Code Analysis"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit with success
+        run: exit 0
   scan-cli:
     needs: check-what-to-build
     if: needs.check-what-to-build.outputs.run_cli == 'true'
@@ -114,6 +122,15 @@ jobs:
           sonar.qualitygate.wait: false
 
   #----------------- Maven scan --------------------
+
+  sq-maven:
+    needs: check-what-to-build
+    if: needs.check-what-to-build.outputs.run_maven == 'false'
+    name: "[GitHub project - Maven] SonarQube Code Analysis"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit with success
+        run: exit 0
   scan-maven:
     needs: check-what-to-build
     if: needs.check-what-to-build.outputs.run_maven == 'true'
@@ -151,6 +168,14 @@ jobs:
             -Dsonar.projectName="GitHub project - Maven"
 
   #----------------- Gradle scan --------------------
+  skip-gradle-qg:
+    needs: check-what-to-build
+    if: needs.check-what-to-build.outputs.run_gradle == 'false'
+    runs-on: ubuntu-latest
+    name: "[GitHub project - Gradle] SonarQube Code Analysis"
+    steps:
+      - name: Exit with success
+        run: exit 0
   scan-gradle:
     needs: check-what-to-build
     if: needs.check-what-to-build.outputs.run_gradle == 'true'
@@ -185,6 +210,14 @@ jobs:
         run: ./gradlew build sonarqube --info
 
   #----------------- .Net scan --------------------
+  skip-dotnet-qg:
+    needs: check-what-to-build
+    if: needs.check-what-to-build.outputs.run_dotnet == 'false'
+    name: "[GitHub project - .Net Core] SonarQube Code Analysis"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit with success
+        run: exit 0
   scan-dotnet:
     needs: check-what-to-build
     if: needs.check-what-to-build.outputs.run_dotnet == 'true'
