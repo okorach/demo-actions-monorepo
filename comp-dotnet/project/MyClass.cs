@@ -7,7 +7,6 @@ namespace HelloWorld
         public string ReturnMessage()
         {
             return "Happy coding!";
-            int i = 1;
         }
     }
 }
