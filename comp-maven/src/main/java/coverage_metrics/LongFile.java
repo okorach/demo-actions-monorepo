@@ -1236,7 +1236,11 @@ public class LongFile {
     }
     return (float)i/(k+1);
    }
- 
+
+   public int square(int i) {
+      return i*i;
+     }
+
   public float f(int i) {
    int k = 0; /* default */
    if (i != 2) {
