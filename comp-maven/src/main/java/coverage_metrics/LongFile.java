@@ -8,7 +8,7 @@ package coverage_metrics;
 
 public class LongFile {
 
-  public int dosomething1(int i) {
+  public float dosomething1(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
@@ -16,7 +16,7 @@ public class LongFile {
     return (float)i/(k+1);
    }
  
- public int dosomething2(int i) {
+ public float dosomething2(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
@@ -24,7 +24,7 @@ public class LongFile {
     return (float)i/(k+1);
    }
  
- public int dosomething3(int i) {
+ public float dosomething3(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
@@ -32,1204 +32,1204 @@ public class LongFile {
     return (float)i/(k+1);
    }
  
- public int dosomething4(int i) {
+ public float dosomething4(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething5(int i) {
+ public float dosomething5(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething6(int i) {
+ public float dosomething6(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething7(int i) {
+ public float dosomething7(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething8(int i) {
+ public float dosomething8(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething9(int i) {
+ public float dosomething9(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething10(int i) {
+ public float dosomething10(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething11(int i) {
+ public float dosomething11(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething12(int i) {
+ public float dosomething12(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething13(int i) {
+ public float dosomething13(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething14(int i) {
+ public float dosomething14(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething15(int i) {
+ public float dosomething15(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething16(int i) {
+ public float dosomething16(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething17(int i) {
+ public float dosomething17(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething18(int i) {
+ public float dosomething18(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething19(int i) {
+ public float dosomething19(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething20(int i) {
+ public float dosomething20(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething21(int i) {
+ public float dosomething21(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething22(int i) {
+ public float dosomething22(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething23(int i) {
+ public float dosomething23(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething24(int i) {
+ public float dosomething24(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething25(int i) {
+ public float dosomething25(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething26(int i) {
+ public float dosomething26(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething27(int i) {
+ public float dosomething27(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething28(int i) {
+ public float dosomething28(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething29(int i) {
+ public float dosomething29(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething30(int i) {
+ public float dosomething30(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething31(int i) {
+ public float dosomething31(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething32(int i) {
+ public float dosomething32(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething33(int i) {
+ public float dosomething33(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething34(int i) {
+ public float dosomething34(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething35(int i) {
+ public float dosomething35(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething36(int i) {
+ public float dosomething36(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething37(int i) {
+ public float dosomething37(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething38(int i) {
+ public float dosomething38(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething39(int i) {
+ public float dosomething39(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething40(int i) {
+ public float dosomething40(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething41(int i) {
+ public float dosomething41(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething42(int i) {
+ public float dosomething42(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething43(int i) {
+ public float dosomething43(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething44(int i) {
+ public float dosomething44(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething45(int i) {
+ public float dosomething45(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething46(int i) {
+ public float dosomething46(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething47(int i) {
+ public float dosomething47(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething48(int i) {
+ public float dosomething48(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething49(int i) {
+ public float dosomething49(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething50(int i) {
+ public float dosomething50(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething51(int i) {
+ public float dosomething51(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething52(int i) {
+ public float dosomething52(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething53(int i) {
+ public float dosomething53(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething54(int i) {
+ public float dosomething54(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething55(int i) {
+ public float dosomething55(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething56(int i) {
+ public float dosomething56(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething57(int i) {
+ public float dosomething57(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething58(int i) {
+ public float dosomething58(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething59(int i) {
+ public float dosomething59(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething60(int i) {
+ public float dosomething60(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething61(int i) {
+ public float dosomething61(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething62(int i) {
+ public float dosomething62(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething63(int i) {
+ public float dosomething63(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething64(int i) {
+ public float dosomething64(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething65(int i) {
+ public float dosomething65(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething66(int i) {
+ public float dosomething66(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething67(int i) {
+ public float dosomething67(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething68(int i) {
+ public float dosomething68(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething69(int i) {
+ public float dosomething69(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething70(int i) {
+ public float dosomething70(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething71(int i) {
+ public float dosomething71(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething72(int i) {
+ public float dosomething72(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething73(int i) {
+ public float dosomething73(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething74(int i) {
+ public float dosomething74(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething75(int i) {
+ public float dosomething75(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething76(int i) {
+ public float dosomething76(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething77(int i) {
+ public float dosomething77(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething78(int i) {
+ public float dosomething78(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething79(int i) {
+ public float dosomething79(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething80(int i) {
+ public float dosomething80(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething81(int i) {
+ public float dosomething81(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething82(int i) {
+ public float dosomething82(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething83(int i) {
+ public float dosomething83(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething84(int i) {
+ public float dosomething84(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething85(int i) {
+ public float dosomething85(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething86(int i) {
+ public float dosomething86(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething87(int i) {
+ public float dosomething87(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething88(int i) {
+ public float dosomething88(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething89(int i) {
+ public float dosomething89(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething90(int i) {
+ public float dosomething90(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething91(int i) {
+ public float dosomething91(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething92(int i) {
+ public float dosomething92(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething93(int i) {
+ public float dosomething93(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething94(int i) {
+ public float dosomething94(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething95(int i) {
+ public float dosomething95(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething96(int i) {
+ public float dosomething96(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething97(int i) {
+ public float dosomething97(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething98(int i) {
+ public float dosomething98(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething99(int i) {
+ public float dosomething99(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething100(int i) {
+ public float dosomething100(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething101(int i) {
+ public float dosomething101(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething102(int i) {
+ public float dosomething102(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething103(int i) {
+ public float dosomething103(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething104(int i) {
+ public float dosomething104(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething105(int i) {
+ public float dosomething105(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething106(int i) {
+ public float dosomething106(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething107(int i) {
+ public float dosomething107(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething108(int i) {
+ public float dosomething108(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething109(int i) {
+ public float dosomething109(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething110(int i) {
+ public float dosomething110(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething111(int i) {
+ public float dosomething111(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething112(int i) {
+ public float dosomething112(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething113(int i) {
+ public float dosomething113(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething114(int i) {
+ public float dosomething114(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething115(int i) {
+ public float dosomething115(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething116(int i) {
+ public float dosomething116(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething117(int i) {
+ public float dosomething117(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething118(int i) {
+ public float dosomething118(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething119(int i) {
+ public float dosomething119(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething120(int i) {
+ public float dosomething120(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething121(int i) {
+ public float dosomething121(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething122(int i) {
+ public float dosomething122(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething123(int i) {
+ public float dosomething123(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething124(int i) {
+ public float dosomething124(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething125(int i) {
+ public float dosomething125(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething126(int i) {
+ public float dosomething126(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething127(int i) {
+ public float dosomething127(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething128(int i) {
+ public float dosomething128(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething129(int i) {
+ public float dosomething129(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething130(int i) {
+ public float dosomething130(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething131(int i) {
+ public float dosomething131(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething132(int i) {
+ public float dosomething132(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething133(int i) {
+ public float dosomething133(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething134(int i) {
+ public float dosomething134(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething135(int i) {
+ public float dosomething135(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething136(int i) {
+ public float dosomething136(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething137(int i) {
+ public float dosomething137(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething138(int i) {
+ public float dosomething138(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething139(int i) {
+ public float dosomething139(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething140(int i) {
+ public float dosomething140(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething141(int i) {
+ public float dosomething141(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething142(int i) {
+ public float dosomething142(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething143(int i) {
+ public float dosomething143(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething144(int i) {
+ public float dosomething144(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething145(int i) {
+ public float dosomething145(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething146(int i) {
+ public float dosomething146(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething147(int i) {
+ public float dosomething147(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething148(int i) {
+ public float dosomething148(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething149(int i) {
+ public float dosomething149(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething150(int i) {
+ public float dosomething150(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething151(int i) {
+ public float dosomething151(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething152(int i) {
+ public float dosomething152(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething153(int i) {
+ public float dosomething153(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething154(int i) {
+ public float dosomething154(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething155(int i) {
+ public float dosomething155(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething156(int i) {
+ public float dosomething156(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething157(int i) {
+ public float dosomething157(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething158(int i) {
+ public float dosomething158(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething159(int i) {
+ public float dosomething159(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething160(int i) {
+ public float dosomething160(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething161(int i) {
+ public float dosomething161(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething162(int i) {
+ public float dosomething162(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething163(int i) {
+ public float dosomething163(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething164(int i) {
+ public float dosomething164(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething165(int i) {
+ public float dosomething165(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething166(int i) {
+ public float dosomething166(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething167(int i) {
+ public float dosomething167(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething168(int i) {
+ public float dosomething168(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething169(int i) {
+ public float dosomething169(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething170(int i) {
+ public float dosomething170(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething171(int i) {
+ public float dosomething171(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething172(int i) {
+ public float dosomething172(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething173(int i) {
+ public float dosomething173(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething174(int i) {
+ public float dosomething174(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
     }
     return (float)i/(k+1);
    }
- public int dosomething175(int i) {
+ public float dosomething175(int i) {
     int k = 0; /* default */
     if (i != 2) {
        k = 1;
