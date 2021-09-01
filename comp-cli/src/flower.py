@@ -1201,7 +1201,12 @@ class Flower:
     CONST1198 = 1198
     CONST1199 = 1199
     CONST1200 = 1200
-
+    CONST1200 = 1201
+    CONST1201 = 1202
+    CONST1202 = 1203
+    CONST1203 = 1204
+    CONST1204 = 1205
+    CONST1205 = 1206
 
     def __init__(self, color=None, season=None):
         self.color = color
