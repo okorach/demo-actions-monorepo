@@ -165,7 +165,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: |
-          mvn -B clean verify sonar:sonar \
+          mvn -B clean org.jacoco:jacoco-maven-plugin:prepare-agent install org.jacoco:jacoco-maven-plugin:report \
             -Dsonar.projectKey="demo:github-comp-maven" \
             -Dsonar.projectName="GitHub project - Maven"
 
