@@ -40,6 +40,7 @@ class Person:
         self.password = "donttouch"
 
 
+
 def hotspot(ip):
     if ip is None:
         ip = '192.168.12.43'
