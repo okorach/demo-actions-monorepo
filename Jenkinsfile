@@ -16,7 +16,6 @@ pipeline {
   stages {
     stage('Run tests') {
       steps {
-        dir(${buildDir})
         script {
           sh "${coverageTool} run -m pytest"
           sh "${coverage} xml -o ${coverageReport}"
