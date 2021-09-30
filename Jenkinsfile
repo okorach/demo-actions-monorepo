@@ -58,7 +58,7 @@ pipeline {
         withSonarQubeEnv('SQ Latest') {
           script {
             def scannerHome = tool 'SonarScanner';
-            sh "${scannerHome}/bin/sonar-scanner"
+            sh "cd comp-cli; ${scannerHome}/bin/sonar-scanner"
           }
         }
       }
