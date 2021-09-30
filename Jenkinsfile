@@ -125,9 +125,9 @@ pipeline {
     }
     stage('SonarQube LATEST analysis - .Net') {
       steps {
-        withSonarQubeEnv('SQ Latest') {
+        withSonarQubeEnv('SQ Latest', envOnly: true) {
           script {
-            sh 'cd comp-dotnet; /usr/local/share/dotnet/dotnet sonarscanner begin /k:"demo:github-comp-dotnet" /n:"GitHub project - .Net Core"; /usr/local/share/dotnet/dotnet build; /usr/local/share/dotnet/dotnet sonarscanner end'
+            sh 'cd comp-dotnet; /usr/local/share/dotnet/dotnet sonarscanner begin /k:"demo:github-comp-dotnet" /n:"GitHub project - .Net Core" /d:"sonar.host.url=${env.SONAR_HOST_URL}" /d:"sonar.login=${env.SONAR_AUTH_TOKEN}"; /usr/local/share/dotnet/dotnet build; /usr/local/share/dotnet/dotnet sonarscanner end /d:"sonar.login=${env.SONAR_AUTH_TOKEN}"'
           }
         }
       }
