@@ -103,7 +103,7 @@ pipeline {
       steps {
         withSonarQubeEnv('SQ Latest') {
           script {
-            sh 'cd comp-gradle; gradlew jacocoTestReport sonarqube'
+            sh 'cd comp-gradle; ./gradlew jacocoTestReport sonarqube'
           }
         }
       }
