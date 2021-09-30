@@ -56,7 +56,7 @@ pipeline {
 //        }
 //      }
 //    }
-    stage('SonarQube LATEST analysis') {
+    stage('SonarQube LATEST analysis - CLI') {
       steps {
         withSonarQubeEnv('SQ Latest') {
           script {
@@ -66,13 +66,34 @@ pipeline {
         }
       }
     }
-    stage("SonarQube LATEST Quality Gate") {
+    stage("SonarQube LATEST Quality Gate - CLI") {
       steps {
         timeout(time: 5, unit: 'MINUTES') {
           script {
             def qg = waitForQualityGate()
             if (qg.status != 'OK') {
-              echo "Quality gate failed: ${qg.status}, proceeding anyway"
+              echo "CLI component quality gate failed: ${qg.status}, proceeding anyway"
+            }
+          }
+        }
+      }
+    }
+    stage('SonarQube LATEST analysis - Maven') {
+      steps {
+        withSonarQubeEnv('SQ Latest') {
+          script {
+            sh 'cd comp-maven; mvn sonar:sonar -B clean org.jacoco:jacoco-maven-plugin:prepare-agent install org.jacoco:jacoco-maven-plugin:report sonar:sonar -Dsonar.projectKey="demo:github-comp-maven" -Dsonar.projectName="GitHub project - Maven"'
+          }
+        }
+      }
+    }
+    stage("SonarQube LATEST Quality Gate - Maven") {
+      steps {
+        timeout(time: 5, unit: 'MINUTES') {
+          script {
+            def qg = waitForQualityGate()
+            if (qg.status != 'OK') {
+              echo "Maven component quality gate failed: ${qg.status}, proceeding anyway"
             }
           }
         }
