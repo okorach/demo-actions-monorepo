@@ -123,5 +123,27 @@ pipeline {
         }
       }
     }
+    stage('SonarQube LATEST analysis - .Net') {
+      steps {
+        withSonarQubeEnv('SQ Latest') {
+          script {
+            sh 'cd comp-dotnet; dotnet-sonarscanner begin /k:"demo:github-comp-dotnet" /n:"GitHub project - .Net Core"; dotnet build; dotnet-sonarscanner end'
+          }
+        }
+      }
+    }
+    stage("SonarQube LATEST Quality Gate - .Net") {
+      steps {
+        timeout(time: 5, unit: 'MINUTES') {
+          script {
+            def qg = waitForQualityGate()
+            if (qg.status != 'OK') {
+              echo ".Net component quality gate failed: ${qg.status}, proceeding anyway"
+            }
+            sh 'rm -f comp-dotnet/build/sonar/report-task.txt'
+          }
+        }
+      }
+    }
   }
 }
