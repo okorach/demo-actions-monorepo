@@ -74,6 +74,7 @@ pipeline {
             if (qg.status != 'OK') {
               echo "CLI component quality gate failed: ${qg.status}, proceeding anyway"
             }
+            sh 'rm -f comp-cli/.scannerwork/report-task.txt'
           }
         }
       }
@@ -95,6 +96,7 @@ pipeline {
             if (qg.status != 'OK') {
               echo "Maven component quality gate failed: ${qg.status}, proceeding anyway"
             }
+            sh 'rm -f comp-maven/target/sonar/report-task.txt'
           }
         }
       }
@@ -116,6 +118,7 @@ pipeline {
             if (qg.status != 'OK') {
               echo "Gradle component quality gate failed: ${qg.status}, proceeding anyway"
             }
+            sh 'rm -f comp-gradle/build/sonar/report-task.txt'
           }
         }
       }
