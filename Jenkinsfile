@@ -99,5 +99,26 @@ pipeline {
         }
       }
     }
+    stage('SonarQube LATEST analysis - Gradle') {
+      steps {
+        withSonarQubeEnv('SQ Latest') {
+          script {
+            sh 'cd comp-gradle; gradlew jacocoTestReport sonarqube"'
+          }
+        }
+      }
+    }
+    stage("SonarQube LATEST Quality Gate - Gradle") {
+      steps {
+        timeout(time: 5, unit: 'MINUTES') {
+          script {
+            def qg = waitForQualityGate()
+            if (qg.status != 'OK') {
+              echo "Gradle component quality gate failed: ${qg.status}, proceeding anyway"
+            }
+          }
+        }
+      }
+    }
   }
 }
