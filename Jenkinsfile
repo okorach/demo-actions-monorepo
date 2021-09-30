@@ -17,9 +17,11 @@ pipeline {
     stage('Run tests') {
       steps {
         script {
+          echo "Run unit tests for coverage"
           sh "cd comp-cli; ${coverageTool} run -m pytest"
-          sh "cd comp-cli; ${coverageTool} xml -o ${coverageReport}"
-          }
+          echo "Generate XML report"
+          sh "pwd; cd comp-cli; ${coverageTool} xml -o ${coverageReport}"
+        }
       }
     }
     // stage('Run 3rd party linters') {
