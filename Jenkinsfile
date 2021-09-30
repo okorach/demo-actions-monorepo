@@ -27,9 +27,10 @@ pipeline {
     stage('Run 3rd party linters') {
      steps {
         script {
-          sh "cd comp-cli; ${pylintTool} *.py */*.py -r n --msg-template=\"{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}\" > ${pylintReport}"
-          sh "cd comp-cli; ${flake8Tool} --ignore=W503,E128,C901,W504,E302,E265,E741,W291,W293,W391 --max-line-length=150 . > ${flake8Report}"
-          sh "cd comp-cli; ${banditTool} -f json --skip B311,B303 -r . -x .vscode,./testpytest,./testunittest > ${banditReport}"
+          // sh "cd comp-cli; ${pylintTool} *.py */*.py -r n --msg-template=\"{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}\" > ${pylintReport}"
+          // sh "cd comp-cli; ${flake8Tool} --ignore=W503,E128,C901,W504,E302,E265,E741,W291,W293,W391 --max-line-length=150 . > ${flake8Report}"
+          // sh "cd comp-cli; ${banditTool} -f json --skip B311,B303 -r . -x .vscode,./testpytest,./testunittest > ${banditReport}"
+          sh "cd comp-cli; ./run_linters.sh"
         }
       }
     }
