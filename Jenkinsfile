@@ -14,23 +14,26 @@ banditTool = 'bandit'
 pipeline {
   agent any
   stages {
-    // stage('Run tests') {
-    //   steps {
-    //     script {
-    //       sh "cd comp-cli; ${coverageTool} run -m pytest"
-    //       sh "cd comp-cli; ${coverage} xml -o ${coverageReport}"
-    //       }
-    //   }
-    // }
-    // stage('Run 3rd party linters') {
-    //   steps {
-    //     script {
-    //       sh "cd comp-cli; ${pylintTool} *.py */*.py -r n --msg-template=\"{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}\" > ${pylintReport}"
-    //       sh "cd comp-cli; ${flake8Tool} --ignore=W503,E128,C901,W504,E302,E265,E741,W291,W293,W391 --max-line-length=150 . > ${flake8Report}"
-    //       sh "cd comp-cli; ${banditTool} -f json --skip B311,B303 -r . -x .vscode,./testpytest,./testunittest > ${banditReport}"
-    //     }
-    //   }
-    // }
+    stage('Run tests') {
+      steps {
+        script {
+          echo "Run unit tests for coverage"
+          sh "cd comp-cli; ${coverageTool} run -m pytest"
+          echo "Generate XML report"
+          sh "pwd; cd comp-cli; ${coverageTool} xml -o ${coverageReport}"
+        }
+      }
+    }
+    stage('Run 3rd party linters') {
+     steps {
+        script {
+          // sh "cd comp-cli; ${pylintTool} *.py */*.py -r n --msg-template=\"{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}\" > ${pylintReport}"
+          // sh "cd comp-cli; ${flake8Tool} --ignore=W503,E128,C901,W504,E302,E265,E741,W291,W293,W391 --max-line-length=150 . > ${flake8Report}"
+          // sh "cd comp-cli; ${banditTool} -f json --skip B311,B303 -r . -x .vscode,./testpytest,./testunittest > ${banditReport}"
+          sh "cd comp-cli; ./run_linters.sh"
+        }
+      }
+    }
 //    stage('SonarQube LTS analysis') {
 //      steps {
 //        withSonarQubeEnv('SQ LTS') {
