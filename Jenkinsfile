@@ -127,7 +127,7 @@ pipeline {
       steps {
         withSonarQubeEnv('SQ Latest') {
           script {
-            sh 'cd comp-dotnet; dotnet-sonarscanner begin /k:"demo:github-comp-dotnet" /n:"GitHub project - .Net Core"; dotnet build; dotnet-sonarscanner end'
+            sh 'cd comp-dotnet; dotnet sonarscanner begin /k:"demo:github-comp-dotnet" /n:"GitHub project - .Net Core"; dotnet build; dotnet sonarscanner end'
           }
         }
       }
