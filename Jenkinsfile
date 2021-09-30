@@ -18,7 +18,7 @@ pipeline {
       steps {
         script {
           sh "cd comp-cli; ${coverageTool} run -m pytest"
-          sh "cd comp-cli; ${coverage} xml -o ${coverageReport}"
+          sh "cd comp-cli; ${coverageTool} xml -o ${coverageReport}"
           }
       }
     }
