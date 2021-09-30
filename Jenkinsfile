@@ -5,7 +5,7 @@ flake8Report = "${buildDir}/flake8-report.out"
 coverageReport = "${buildDir}/coverage.xml"
 
 coverageTool = 'coverage'
-pylintTool = 'pylint'
+pylintTool = 'pylint' 
 flake8Tool = 'flake8'
 banditTool = 'bandit'
 
