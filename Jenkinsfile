@@ -14,14 +14,14 @@ banditTool = 'bandit'
 pipeline {
   agent any
   stages {
-//    stage('Run tests') {
-//      steps {
-//        script {
-//          sh "${coverageTool} run -m pytest"
-//          sh "${coverage} xml -o ${coverageReport}"
-//        }
-//      }
-//    }
+    stage('Run tests') {
+      steps {
+        script {
+          sh "cd comp-cli; ${coverageTool} run -m pytest"
+          sh "cd comp-cli; ${coverage} xml -o ${coverageReport}"
+          }
+      }
+    }
 //    stage('Run 3rd party linters') {
 //      steps {
 //        script {
