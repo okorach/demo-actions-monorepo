@@ -1,4 +1,9 @@
 name: Build and Scan
+
+env:
+  tags: 'github,actions,github-actions,monorepo'
+  projectRootKey: 'demo:github-actions-mono'
+
 on:
   push:
     branches:
@@ -59,6 +64,11 @@ jobs:
           echo "::set-output name=run_maven::$build_maven"
           echo "::set-output name=run_gradle::$build_gradle"
           echo "::set-output name=run_dotnet::$build_dotnet"
+          # Set project tags on the fly
+          for postfix in cli maven gradle dotnet
+          do
+            curl -X POST -u ${{ secrets.SONAR_TOKEN }}: "${{ secrets.SONAR_HOST_URL }}/api/project_tags/set?project=${{env.projectRootKey}}-$postfix&tags=${{env.tags}},$postfix"
+          done
   #----------------- CLI scan ---------------------
   skipped-cli-qg:
     needs: check-what-to-build
