@@ -1,5 +1,5 @@
 #!/bin/bash
 
-gradlew jacocoTestReport sonarqube $*
+gradle build jacocoTestReport sonar $*
 
 exit $?

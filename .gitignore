@@ -14,3 +14,4 @@ comp-gradle/.classpath
 comp-gradle/.project
 comp-gradle/bin/
 comp-gradle/.settings/
+comp-cli/.sonar/
