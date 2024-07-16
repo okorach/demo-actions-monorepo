@@ -199,6 +199,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 17
+      - name: Setup Gradle 8.7
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: 8.7
       - name: Cache SonarQube packages
         uses: actions/cache@v1
         with:
