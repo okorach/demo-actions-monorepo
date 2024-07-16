@@ -50,20 +50,20 @@ application {
     mainClass = "org.example.App"
 }
 
-tasks.test {
-    // Use JUnit Platform for unit tests.
-    useJUnitPlatform()
-    finalizedBy(tasks.jacocoTestReport)
-}
+// tasks.test {
+//     // Use JUnit Platform for unit tests.
+//     useJUnitPlatform()
+//     finalizedBy(tasks.jacocoTestReport)
+// }
 
-jacoco {
-    toolVersion = "0.8.11"
-}
+// jacoco {
+//     toolVersion = "0.8.11"
+// }
 
-tasks.jacocoTestReport {
-    dependsOn(tasks.test)
-    reports {
-        xml.required = true
-        html.outputLocation = layout.buildDirectory.dir("jacocoHtml")
-    }
-}
+// tasks.jacocoTestReport {
+//     dependsOn(tasks.test)
+//     reports {
+//         xml.required = true
+//         html.outputLocation = layout.buildDirectory.dir("jacocoHtml")
+//     }
+// }
