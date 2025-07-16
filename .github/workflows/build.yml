@@ -89,11 +89,11 @@ jobs:
     #    python-version: [2.7, 3.5, 3.6, 3.7, 3.8]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: 3.8
       - name: Install dependencies
@@ -117,7 +117,7 @@ jobs:
         working-directory: ./comp-cli
         run: ./run_linters.sh
       - name: Cache SonarQube packages
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
@@ -159,13 +159,13 @@ jobs:
         with:
           java-version: 17
       - name: Cache SonarQube packages
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
       - name: Cache Maven packages
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
@@ -206,13 +206,13 @@ jobs:
         with:
           gradle-version: 8.7
       - name: Cache SonarQube packages
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
       - name: Cache Gradle packages
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: ~/.gradle/caches
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
@@ -249,7 +249,7 @@ jobs:
           java-version: 17
       - name: Cache Scanner for .Net
         id: cache-sonar-scanner
-        uses: actions/cache@v1
+        uses: actions/cache@v4
         with:
           path: ~/.sonar/scanner
           key: ${{ runner.os }}-dotnet-scan
