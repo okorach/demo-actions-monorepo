@@ -5,6 +5,8 @@ env:
   projectRootKey: 'demo:github-actions-mono'
 
 on:
+  schedule:
+    - cron: '15 11 * * 1'
   push:
     branches:
       - master # or the name of your main branch
