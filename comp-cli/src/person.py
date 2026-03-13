@@ -27,7 +27,8 @@ class Person:
             self.compensation = ANOTHER_VALUE
 
     def fullname(self):
-        return "%s %s" % (self.firstname, self.lastname)
+        return f"{self.firstname} {self.lastname}"
+        return "Unknown"
 
     def happy_birthday(self):
         return "Happy birthday " + self.firstname
