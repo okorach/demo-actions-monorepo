@@ -72,10 +72,10 @@ jobs:
             curl -X POST -u ${{ secrets.SONAR_TOKEN }}: "${{ secrets.SONAR_HOST_URL }}/api/project_tags/set?project=${{env.projectRootKey}}-$postfix&tags=${{env.tags}},$postfix"
           done
   #----------------- CLI scan ---------------------
-  skipped-cli-qg:
+  skipped-scan-cli:
     needs: check-what-to-build
     if: needs.check-what-to-build.outputs.run_cli == 'false'
-    name: "[GitHub project] SonarQube Code Analysis"
+    name: "[GitHub / Actions / monorepo CLI] SonarQube Code Analysis"
     runs-on: ubuntu-latest
     steps:
       - name: Exit with success
@@ -137,10 +137,10 @@ jobs:
 
   #----------------- Maven scan --------------------
 
-  sq-maven:
+  skip-scan-maven:
     needs: check-what-to-build
     if: needs.check-what-to-build.outputs.run_maven == 'false'
-    name: "[GitHub project - Maven] SonarQube Code Analysis"
+    name: "[[GitHub / Actions / monorepo Maven] SonarQube Code Analysis"
     runs-on: ubuntu-latest
     steps:
       - name: Exit with success
@@ -181,11 +181,11 @@ jobs:
           mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install org.jacoco:jacoco-maven-plugin:report sonar:sonar
 
   #----------------- Gradle scan --------------------
-  skip-gradle-qg:
+  skip-scan-gradle:
     needs: check-what-to-build
     if: needs.check-what-to-build.outputs.run_gradle == 'false'
     runs-on: ubuntu-latest
-    name: "[GitHub project - Gradle] SonarQube Code Analysis"
+    name: "[GitHub / Actions / monorepo - Gradle] SonarQube Code Analysis"
     steps:
       - name: Exit with success
         run: exit 0
@@ -228,10 +228,10 @@ jobs:
         run: gradle build sonar --info --debug --stacktrace
 
   #----------------- .Net scan --------------------
-  skip-dotnet-qg:
+  skip-scan-dotnet:
     needs: check-what-to-build
     if: needs.check-what-to-build.outputs.run_dotnet == 'false'
-    name: "[GitHub project - .Net Core] SonarQube Code Analysis"
+    name: "[[GitHub / Actions / monorepo .Net Core] SonarQube Code Analysis"
     runs-on: ubuntu-latest
     steps:
       - name: Exit with success
