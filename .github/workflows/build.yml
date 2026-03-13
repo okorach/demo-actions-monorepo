@@ -231,7 +231,7 @@ jobs:
   skip-scan-dotnet:
     needs: check-what-to-build
     if: needs.check-what-to-build.outputs.run_dotnet == 'false'
-    name: "[[GitHub / Actions / monorepo .Net Core] SonarQube Code Analysis"
+    name: "[GitHub / Actions / monorepo .Net Core] SonarQube Code Analysis"
     runs-on: ubuntu-latest
     steps:
       - name: Exit with success
