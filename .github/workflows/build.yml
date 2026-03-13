@@ -185,7 +185,7 @@ jobs:
     needs: check-what-to-build
     if: needs.check-what-to-build.outputs.run_gradle == 'false'
     runs-on: ubuntu-latest
-    name: "[GitHub / Actions / monorepo - Gradle] SonarQube Code Analysis"
+    name: "[GitHub / Actions / monorepo Gradle] SonarQube Code Analysis"
     steps:
       - name: Exit with success
         run: exit 0

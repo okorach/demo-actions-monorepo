@@ -28,7 +28,6 @@ class Person:
 
     def fullname(self):
         return f"{self.firstname} {self.lastname}"
-        return "Unknown"
 
     def happy_birthday(self):
         return "Happy birthday " + self.firstname
