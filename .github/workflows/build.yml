@@ -140,7 +140,7 @@ jobs:
   skip-scan-maven:
     needs: check-what-to-build
     if: needs.check-what-to-build.outputs.run_maven == 'false'
-    name: "[[GitHub / Actions / monorepo Maven] SonarQube Code Analysis"
+    name: "[GitHub / Actions / monorepo Maven] SonarQube Code Analysis"
     runs-on: ubuntu-latest
     steps:
       - name: Exit with success
